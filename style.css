@@ -97,7 +97,7 @@ h1, h2 , #start-button, #play-again button {
 }
 
 .back-face{
-  background-image: url("http://clipart-library.com/images/8cEbeEMLi.png");
+  background-image: url("./images/cardback.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
