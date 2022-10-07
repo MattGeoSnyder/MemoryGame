@@ -1,2 +1,136 @@
 @import "{{ site.theme }}";
 
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+#header-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1, h2 , #start-button, #play-again button {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+#start-box {
+  position: absolute;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  transition: bottom ease-out 1s;
+}
+
+.started {
+  bottom: 800px;
+}
+
+#start-button {
+  height: 200px;
+  width: 300px;
+  font-size: 2rem;
+  background-color: #000;
+  text-decoration: blink;
+
+}
+
+.blink {
+  animation: blinkingText 1s infinite;
+}
+
+@keyframes blinkingText {
+  50%{
+    color: #000;
+  }
+}
+
+#game-container {
+  position: relative;
+  margin: 0 auto;
+  height: 70%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#game {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  top: 800px;
+  transition: top ease-in 1s;
+}
+
+.card-container {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 215px;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+
+.front-face, .back-face {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  border-radius: 8px;
+
+  backface-visibility: hidden;
+}
+
+.back-face{
+  background-image: url("../cardback.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+#play-again {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#game-over {
+  width: 100%;
+  text-align: center;
+}
+
+#play-again button {
+  background-color: #000;
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+
