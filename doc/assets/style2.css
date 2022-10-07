@@ -99,7 +99,7 @@ body {
   }
   
   .back-face{
-    background-image: url("./images/cardback.png");
+    background-image: url("./cardback.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
